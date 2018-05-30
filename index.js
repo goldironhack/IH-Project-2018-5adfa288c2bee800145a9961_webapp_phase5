@@ -353,18 +353,21 @@ setTimeout(function(){
         distrito[i][2][1] = i+1;
         distrito[i][6][0] = distrito[i][2][1];
     }
+    console.log(distrito);
     distrito.sort(function(a, b){return a[4][0] - b[4][0]});
     for (var i = 0; i < distrito.length; i++) {
         distrito[i][4][1] = i+1;
         distrito[i][6][0] = (distrito[i][6][0]+distrito[i][4][1]);
     }
     distrito.sort(function(a, b){return a[5][0] - b[5][0]});
+    console.log(distrito);
     for (var i = 0; i < distrito.length; i++) {
         console.log(distrito[i][5][0])
         distrito[i][5][1] = i+1;
         distrito[i][6][0] = (distrito[i][6][0]+distrito[i][5][1])/3;
     }
     distrito.sort(function(a, b){return a[6][0] - b[6][0]});
+    console.log(distrito);
     for (var i = 0; i < distrito.length; i++) {
         distrito[i][6][1] = i+1;
     }

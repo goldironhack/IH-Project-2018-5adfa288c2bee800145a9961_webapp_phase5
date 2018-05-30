@@ -1,9 +1,135 @@
-body {
-    color: #444;
-    font-family: Arial, sans-serif;
+#map {
+ border: 2px solid #380B61;
+ height: 500px;
+ width: 100%;
+ align-items: center;
+ align-content: center;
+ text-align: center;
 }
 
-.container {
-    width: 100%;
-    max-width: 960px;
+body {
+       font-family: 'Titan One', cursive;
 }
+
+#info-box {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  width: 200px;
+  border: 1px solid black;
+}
+#Iconos{
+	text-align: center;
+	font-size: 30px;
+    line-height: 1.6;
+
+}
+
+#Icono{
+	text-align: center;
+	font-size: 48px;
+	color: #FFFFFF;
+    line-height: 1.6;
+}
+
+#Icono:hover{
+	color: #BDBDBD;
+	-webkit-transform: scale(1.3);
+-ms-transform: scale(1.3);
+transform: scale(1.3);
+}
+
+#Frente{
+	background: #610B5E;
+	text-align: center;
+}
+#title:hover:before{
+	content: "New York University";
+}
+#title:before{
+	content: "NYU";
+}
+#title{
+	font-size: 48px;
+	color:  #FFFFFF;
+	text-align: left;
+	line-height: 1.6;
+}
+#title1{
+	text-align: left;
+}
+
+#distritos_table{
+    width: 400px;
+}
+
+#distritos_table td,th{
+    text-align:center;
+    width: 200px;
+    color: black;
+    border:solid black;
+}
+#Informacion{
+    display:none;
+    text-align:center;
+    font-size:x-large;
+}
+#Informacion1{
+    display:none;
+    text-align:left;
+    font-size:x-large;
+}
+#B_Iconos{
+    display:none;
+    font-size:small;
+    line-height: 3;
+}
+#Titulo{
+    line-height: 3;
+    width: 450px;
+    text-align:center;
+    font-size:x-large
+}
+#Titulo1{
+    line-height: 4;
+    width: 450px;
+    text-align:center;
+    font-size:x-large
+}
+#Titulo2{
+    width: 450px;
+    text-align:center;
+}
+#Titulo3{
+    width: 450px;
+    text-align:center;
+}
+#table{
+  
+  max-height:400px;
+  overflow: auto;
+}
+#table td,th{
+    text-align:center;
+    border:solid black;
+}
+#table1{
+  max-height:400px;
+  overflow: auto;
+}
+#Opcion{
+    line-height: 0.1;
+    height:35px;
+}
+#Title{
+    height:40px;
+    line-height: 1;
+    text-align:center;
+    background: grey;
+}
+
+
+
+
+

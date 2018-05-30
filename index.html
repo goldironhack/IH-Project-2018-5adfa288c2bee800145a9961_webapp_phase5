@@ -1,15 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkBfoma7NvChlBTEcu0fZIuUs5lNKSQuI&libraries=geometry">
+      </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <button id="btn">Click me</button>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <title></title>
+  </head>
+    <!--#F8EFFB
+        #1CB3DE
+    -->
+  	<body style="background-color:#D8CEF6;">
+			<div class="row justify-content-center" id="Frente">
+				<div class="col-md-1 offset-1">
+					<i class="material-icons" id="Icono">location_city</i>
+				</div>
+				<div class="col" id="title"></div>
+			</div>
+			<div class="row justify-content-center">
+				<font size="7" color=" #0101DF">Find The Best House!</font>
+			</div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+          <div id="map"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="Titulo"></div>
+        <div id="Titulo1"></div>
+        <div id="Titulo2"></div>
+        <div class="row justify-content-center">
+            <div class="col-md-1" id="B_Iconos">
+                <div>
+                <i class="material-icons" id="Iconos">star</i>
+                </div>
+                <div>
+                <i class="material-icons" id="Iconos">security</i>
+                </div>
+                <div>
+                <i class="material-icons" id="Iconos">departure_board</i>
+                </div>
+                <div>
+                <i class="material-icons" id="Iconos">monetization_on</i>
+                </div>
+            </div>
+            <div class="col-md-4" id= "Informacion1">
+                <h2></h2>
+                <p>Ranking</p>
+                <p>Safety</p>
+                <p>Distance</p>
+                <p>Affordability</p>
+            </div>
+            <div class="col-md-5" id= "Informacion">
+                <h2></h2>
+                <p id="Ranking"></p>
+                <p id="Safety"></p>
+                <p id="Distance"></p>
+                <p id="Affordability"></p>
+            </div>
+           <div id="Titulo3"></div>
+        </div>
+      </div>
     </div>
-    <script src="index.js"></script>
-</body>
+    
+    <div class="row justify-content-center">
+        <div id="Paneles">
+                <ul class="list-group">
+                    <li class="list-group-item" id="Title">
+                        <font >Safety</font>
+                    </li>
+                    <li class="list-group-item" id="Opcion">
+                        <input class="check" type="checkbox" value="5" checked/>
+                        <font id="texto" >Safety</font>
+                    </li>
+                    <li class="list-group-item" id="Opcion">
+                       <input class="check" type="checkbox" value="6" checked/>
+                        <font >Distance</font>
+                    </li>
+                    <li class="list-group-item" id="Opcion">
+                        <input class="check" type="checkbox" value="7" checked/>
+                        <font >Affordability</font>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-1"></div>
+            <div id="Paneles">
+                <ul class="list-group">
+                    <li class="list-group-item" id="Title">
+                        <font >Borough</font>
+                    </li>
+                    <li class="list-group-item" id="Opcion">
+                        <input class="check" type="checkbox" value="0" checked/>
+                        <font id="texto" >Manhattan</font>
+                    </li>
+                    <li class="list-group-item" id="Opcion">
+                        <input class="check" type="checkbox" value="1" checked/>
+                        <font id="texto" >Bronx</font>
+                    </li>
+                    <li class="list-group-item" id="Opcion">
+                        <input class="check" type="checkbox" value ="2"  checked/>
+                        <font >Brooklyn</font>
+                    </li>
+                    <li class="list-group-item" id="Opcion">
+                        <input class="check" type="checkbox" value="3" checked/>
+                        <font >Queens</font>
+                    </li>
+                    <li class="list-group-item" id="Opcion">
+                        <input class="check" type="checkbox" value="4" checked/>
+                        <font id="texto" >Staten Island</font>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+          <button id="getData">Get Data</button>
+      <div class="col-md-auto">
+          <button id="exportData">Export Data</button>
+      </div>
+      </div>
+    </div>
+
+    
+    <div class="row justify-content-center">
+    <div class="col-md-1"></div>
+     <div class="col-md-5">
+       <div id="table">
+       <table>
+         <tbody id="tableBody"></tbody>
+         </table>
+        </div>
+     </div>
+     <div class="col-md-6">
+       
+     </div>
+      <div class="col-md-1"></div>
+   </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+     <script src="index.js" ></script>
+     <script
+      src="https://www.jqueryscript.net/demo/jQuery-Plugin-To-Convert-HTML-Table-To-CSV-tabletoCSV/jquery.tabletoCSV.js"></script>
+  </body>
 </html>
